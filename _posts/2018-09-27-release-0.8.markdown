@@ -4,6 +4,38 @@ title:  "Release 0.8.0"
 date:   2018-09-27 11:49:38 +0100
 categories: sldeditor release
 ---
-Version 0.8.0 of the SLD Editor has been released and available [here][sldeditor-release].  The release improves a number of areas.
+Version 0.8.0 of the SLD Editor has been released and available [here][sldeditor-release].  The main area of improvement is the filter dialog where there were a number of issues.
+
+## Collection_Count
+The Collection_Count function in GeoTools was returning the wrong parameter description so I created a [pull request](https://osgeo-org.atlassian.net/browse/GEOT-6032) to fix the issue in GeoTools 20.0.
+
+## GeoTools filter functions
+The following functions in GeoTools did not have a toString() method implemented which meant the Java class name was displayed in the filter dialog instead of the function name and parameters:
+
+* RecodeFunction
+* StringTemplateFunction
+* JenksNaturalBreaksFunction
+* CategorizeFunction
+* UniqueIntervalFunction
+* QuantileFunction
+* StandardDeviationFunction
+* EqualIntervalFunction
+* ConstrastFunction
+* LightenFunction
+* GrayscaleFunction
+* ModuloFunction
+
+I created a [pull request](https://osgeo-org.atlassian.net/browse/GEOT-6033) to fix the issue in GeoTools 20.0.
+
+## PropertyIsLike
+In GeoTools the PropertyIsLike uses String parameters but the [Filter specification](http://schemas.opengis.net/filter/1.1.0/filter.xsd) states that they should be single characters.  Updated the code to refelect this.
+
+## RasterSymbolizer SelectedChannelType
+In GeoTools 20.0 the RasterSymbolizer SelectedChannelType changed from being a value (before GeoServer 2.14) to an expression (GeoServer 2.14 onwards), update the Vendor Option settings to get the benefit.
+
+## Development Internals
+A number of changes have been made internally including switching over to JUnit 5.  The most painful area has been the move to deprecate JAXB in forthcoming Java versions.  The project still compiles on Java 8 but using anything else causes issues with JAXB, I'm hoping Java 11 development catches up and a solution can be found soon.  As a consequence whilst I wanted to be able to create a single executable JAR for all OS this is now not possible. Parameters have to be passed into the JVM which means either a separate script to start the application or installers for all the different operating systems.  I'm hoping Java 11 will sort this out but currently there are now separate Windows, Mac OS and Ubuntu installers for the application.
+
+Code coverage has increased to 83% but I have created a GeoServer virtual machine using Vagrant to allow the GeoServer intgration to be unit tested locally which can increase the code coverage statistcs further.  Haven't found a way of hosting this VM in Travis yet to get the increased code coverage numbers.
 
 [sldeditor-release]: https://github.com/robward-scisys/sldeditor/releases/tag/0.8.0
