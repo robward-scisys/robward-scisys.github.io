@@ -18,7 +18,7 @@ title: SLD Editor
 description: >- # this means to ignore newlines until "baseurl:"
   Java desktop application that allows the creation and editing of OGC Styled Layer Descriptors for use with GeoServer.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://robward-scisys.github.io/sldeditor/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://robward-scisys.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  robward-scisys
 
 # Build settings
