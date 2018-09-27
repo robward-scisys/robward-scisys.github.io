@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Release 0.8.0"
+date:   2018-09-27 11:49:38 +0100
+categories: sldeditor release
+---
+Version 0.8.0 of the SLD Editor has been released and available [here][sldeditor-release].  The release improves a number of areas.
+
+[sldeditor-release]: https://github.com/robward-scisys/sldeditor/releases/tag/0.8.0
