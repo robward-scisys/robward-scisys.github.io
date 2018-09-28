@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "SLDEditor Roadmap"
+date:   2018-09-28 09:30:42 +0100
+categories: sldeditor roadmap
+---
+
+Some thoughts on the roadmap for the SLD Editor.
+
+Java 11
+=======
+
+Currently the application compiles with Java 8 but nothing later due to JAXB being deprecated.  The application is closely coupled to GeoTools which is starting to be reworked for Java 11.  Once development is further advanced I will start to look at updating SLDEditor to work with Java 11.
+
+QGIS
+====
+
+The application started out as an experiment to see if the GeoTools library could be used to provide the symbol rendering and as grown from there.  But it is yet another application and really should be integrated into another application.  The likely candidate is QGIS, there is quite a bit of common functionality, but QGIS is written in C++ and SLDEditor and GeoTools in Java.  However I have started to develop the SLDEditor functionality in QGIS but have hit a stumbling block in that the macOS build is broken and has been for a long time. For all maven's faults being able to type one command to install all dependencies and compile the application and knowing it is going work is priceless.  Before the build broke I developed classes to read and write SLD files without filter support but with unit tests.  When the build works again and I have time I may continue...
