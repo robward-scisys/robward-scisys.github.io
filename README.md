@@ -1,2 +1,2 @@
 # robward-scisys.github.io
-SLD Editor blog
+The [blog](https://robward-scisys.github.io/) for [SLD Editor](https://github.com/robward-scisys/sldeditor)
