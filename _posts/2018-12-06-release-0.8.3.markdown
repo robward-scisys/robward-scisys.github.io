@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Release 0.8.3"
-date:   2018-12-11 11:49:38 +0100
+date:   2018-12-6 11:49:38 +0100
 categories: sldeditor release
 ---
 
