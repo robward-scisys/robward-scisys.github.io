@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "Release 0.8.3"
+date:   2018-12-11 11:49:38 +0100
+categories: sldeditor release
+---
+
+SLDEditor Release 0.8.3
+==================================================
+
+Version 0.8.3 of the SLD Editor has been released and available [here][sldeditor-release].  The release ensures that UTF-8 is used throughout the application as per the SLD specification.
+
+[sldeditor-release]: https://github.com/robward-scisys/sldeditor/releases/tag/v0.8.3
+
