@@ -6,7 +6,7 @@ categories: sldeditor release
 ---
 
 SLDEditor Release 0.8.3
-==================================================
+=======================
 
 Version 0.8.3 of the SLD Editor has been released and available [here][sldeditor-release].  The release ensures that UTF-8 is used throughout the application as per the SLD specification.
 
